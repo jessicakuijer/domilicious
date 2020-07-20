@@ -23,5 +23,5 @@
 - /menu (and book a menu! you can reach pre-confirmation and paypal payment at the end)
 - /contact (write a message and get results at https://mailtrap.io/signin with domicilious@gmail.com / password: domicilious1! )
 
-Credits : made with Bouchra Travelsi: https://github.com/BOUCHRA-ui, Mounia Jafjaf: https://github.com/Mounia-j and Almarine Grady: https://github.com/almoybf
+Credits : made with Bouchra Trabelsi: https://github.com/BOUCHRA-ui, Mounia Jafjaf: https://github.com/Mounia-j and Almarine Grady: https://github.com/almoybf
   
