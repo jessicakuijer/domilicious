@@ -22,4 +22,6 @@
 - /commentaire (and write a comment into "livre d'or")
 - /menu (and book a menu! you can reach pre-confirmation and paypal payment at the end)
 - /contact (write a message and get results at https://mailtrap.io/signin with domicilious@gmail.com / password: domicilious1! )
+
+Credits : 
   
