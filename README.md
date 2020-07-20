@@ -17,9 +17,9 @@ Copy of our collaborative project : https://github.com/BOUCHRA-ui/Domi-Licious
 6. you can access the website on localhost:8000
 
 7. try to log in with test6@test.com / password: pass_1234 (ROLE_USER) or admin@domilicious.com / password : admin (ROLE_ADMIN) to check :
-  /admin (and access easyadmin directly or via navbar)
-  /user (this page was intentionnally set as a basic array layout, to test permissions for the live demo)
-  /commentaire (and write a comment)into "livre d'or"
-  /menu (and book a menu! you can reach pre-confirmation and paypal payment at the end)
-  /contact (write a message and get results at https://mailtrap.io/signin with domicilious@gmail.com / password: domicilious1! )
+/admin (and access easyadmin directly or via navbar)
+/user (this page was intentionnally set as a basic array layout, to test permissions for the live demo)
+/commentaire (and write a comment)into "livre d'or"
+/menu (and book a menu! you can reach pre-confirmation and paypal payment at the end)
+/contact (write a message and get results at https://mailtrap.io/signin with domicilious@gmail.com / password: domicilious1! )
   
