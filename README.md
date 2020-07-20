@@ -2,7 +2,7 @@
 Projet collectif final  / soutenance
 Copy of our collaborative project : https://github.com/BOUCHRA-ui/Domi-Licious
 
-![ScreenShot](https://github.com/jessicakuijer/domilicious/blob/domilicious-final/screenshot.PNG})
+![ScreenShot](https://github.com/jessicakuijer/domilicious/blob/domilicious-final/screenshot.PNG)
 
 1. Clone this repository
 
