@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Projet Domilicious 2020 - promo Noisy-le-sec WID93 Social Builder Webforce3" />
+    <meta name="author" content="Bouchra Trabelsi, Almarine Grady, Mounia Jafjaf, Jessica Kuijer" />
+	<title>{% block title %}DomiLicious - Votre chef à domicile{% endblock %}</title>
+	
+	{% block stylesheets %}
+	<!-- Favicon Domilicious -->
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32x32.png') }}">
+	 <!-- Bootstrap Core CSS -->
+    <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
+	
+	<!-- Custom Theme files -->
+	<link href="{{ asset('css/style.css')}}" rel='stylesheet' type='text/css' />
+	<link href="{{ asset('css/popuo-box.css')}}" rel="stylesheet" type="text/css" media="all"/>
+	<link href="{{ asset('css/contact-buttons.css')}}" rel="stylesheet">
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="{{ asset('js/jquery.min.js')}}"></script>
+	
+	<!---pop-up-box---->
+	<script type="text/javascript" src="{{ asset('js/modernizr.custom.min.js')}}"></script>    
+	<script src="{{ asset('js/jquery.magnific-popup.js')}}" type="text/javascript"></script>
+	<!---//pop-up-box---->
+		
+	<script>
+			$(document).ready(function() {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+																			
+			});
+	</script>
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+         {% endblock %} 
+    </head>
+    <body>
+        {% block header %}
+           <!-- /////////////////////////////////////////Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+
+				</button>
+				<a class="navbar-brand" href="{{path('accueil')}}">
+					<img src="{{ asset('images/logo2.png') }}" class="hidden-xs" alt="logo domilicious">
+					<h3 class="visible-xs">Domi'Licious</h3>
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+                        <a class="page-scroll" href="{{path('chef_index')}}">Chefs</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{path('menu_index')}}">Menus</a>
+                    </li>
+                    <li>
+						<a class="page-scroll" href="{{ path('contact_contact') }}">Contactez nous</a>
+					</li>
+					<li>
+                        <a class="page-scroll" href="{{path('commentaire_index')}}">Livre d'or</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{path('cgv')}}">Conditions de vente</a>
+                    </li>
+
+										
+					{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+					
+					<em class="auth">Bonjour, {{ app.user.prenom }} - {{ app.user.nom }}</em>
+					 || 
+					
+					<a href="{{path('app_logout')}}"><img src="{{ asset('images/exit.png') }}" alt="se déconnecter"></a>
+					
+					{% else %}
+					                     
+                    <button type="button" class="btn btn-info">
+                         <a href="{{path('app_register')}}">Je m'inscris !</a>
+					</button>
+
+					|| <button type="button" class="btn btn-light">
+						<a href="{{path('app_login')}}"><img src="{{ asset('images/enter.png') }}" alt="connexion"> Se connecter</a>
+						</button>
+
+					</li><br>
+					<em>Bonjour, visiteur!</em>
+					</li>
+					
+					{% endif %}
+					
+					{% if is_granted('ROLE_ADMIN') %}
+					<li>
+                    <button type="button" class="btn btn-dark">
+                            <a href="{{path('easyadmin')}}" target="_blank">Espace admin</a>
+                    </button> 
+                    
+					</li> 
+					{% endif %} 
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	
+	<!-- Header -->
+        {% endblock %}
+
+
+        {% block body %}{% endblock %}
+		<!-- /Back To Top -->
+        <a id='backTop'>Back To Top</a>
+
+        {% block footer %}
+        		<footer>
+		<div class="wrap-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-footer footer-1">
+						<div class="footer-heading"><h4>Langages</h4>
+					</div>
+						<div class="content">
+							<div class="row">
+								<div class="col-md-3">
+									<img src="{{ asset('images/html-5.png')}}" class="img-thumbnail"/>
+								</div>
+								<div class="col-md-3">
+									<img src="{{ asset('images/css.png')}}" class="img-thumbnail" />
+								</div>
+								<div class="col-md-3">
+									<img src="{{ asset('images/javascript.png')}}" class="img-thumbnail" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<img src="{{ asset('images/icon-bootstrap.png')}}" class="img-thumbnail"/>
+								</div>
+								<div class="col-md-3">
+									<img src="{{ asset('images/icon-symfony.png')}}" class="img-thumbnail" />
+								</div>
+								<div class="col-md-3">
+									<img src="{{ asset('images/icon-cafe.png')}}" class="img-thumbnail" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-footer footer-2">
+						<div class="footer-heading"><h4>A propos</h4></div>
+						<div class="content">
+							<p>Domilicious est un projet collectif de fin de formation Webforce3 et qui a pour objectif de proposer la reservation d'un chef à domicile selon un menu pré-établi.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-footer footer-3">
+						<div class="footer-heading"><h4>Labels</h4></div>
+						<div class="content">
+							<ul>
+								<li><a href="#">Food</a></li>
+								<li><a href="#">Restaurant</a></li>
+								<li><a href="#">Chefs</a></li>
+								<li><a href="#">Menus</a></li>
+								<li><a href="#">New Food</a></li>
+								<li><a href="#">domicile</a></li>
+								<li><a href="#">Professionnels</a></li>
+								<li><a href="#">Domilicious</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+	<div class="coppy-right">
+		<div class="wrap-footer">
+			<div class="clearfix">
+				<div class="col-md-6 col-md-offset-3">
+					<p>Copyrights 2020 - Domilicious - Bouchra Trabelsi, Almarine Grady, Mounia Jafjaf, Jessica Kuijer  </p>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!-- Footer -->
+        {% endblock %}
+  			{% block flash %}
+            {% for message in app.flashes('error') %}
+            <div class="alert alert-danger" role="alert">
+                {{message}}
+            </div>
+            {% endfor %} 
+	  {% endblock %}
+	  
+         {% block javascripts %}
+        <!-- Core JavaScript Files -->
+    <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+	<script src="{{ asset('js/jquery.backTop.min.js')}}"></script>
+	<script>
+		$(document).ready( function() {
+			$('#backTop').backTop({
+				'position' : 1200,
+				'speed' : 500,
+				'color' : 'red',
+			});
+		});
+	</script>
+	<script src="{{ asset('js/jquery.contact-buttons.js')}}"></script>
+	<script src="{{ asset('js/demo.js')}}"></script>
+        {% endblock %}
+
+    </body>
+</html>

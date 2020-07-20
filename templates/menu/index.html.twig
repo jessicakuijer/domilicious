@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les menus des chefs - Domi'Licious{% endblock %}
+
+{% block body %}
+
+     <section class="box-content box-3" id="menu">
+        <div class="container">
+            {% for menu in menus %}
+            <div class="row heading">
+                <div class="col-lg-12">
+                 <h2>Cuisine : {{ menu.typeCuisine.title }}</h2>
+                </div>
+                <div class="row center">
+                    <div class="col-md-6">
+                        <div class="wrap-img">
+                            <img src="{{ asset('uploads/images/chefs/') }}{{ menu.image }}">
+						</div>
+                           <button class="btn btn-dark"><a href="{{ path('booking_new', {'id': menu.id}) }}">Réserver ce menu</a></button>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div>
+                            <p> Entrée: <br>
+                            {{ menu.entree }}</p>
+                            <hr> 
+                            <p>Plat: <br>
+                            {{ menu.plat }}</p>
+                            <hr> 
+                            <p>Dessert: <br>
+                            {{ menu.dessert }}
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
