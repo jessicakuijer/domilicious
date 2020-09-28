@@ -14,7 +14,7 @@
 
 5. install database by commande lines : php app/console doctrine:database:create & php app/console doctrine:database:update --force
 
-5. change .env file line APP_ENV=prod by APP_ENV=dev first!
+5. change .env file line APP_ENV=prod by APP_ENV=dev because you'll need it to be able to load fixtures. it won't work in production mode.
 
 6. install fixtures by this command line if necessary : composer require doctrine/doctrine-fixtures-bundle --dev
 
