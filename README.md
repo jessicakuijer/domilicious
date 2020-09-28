@@ -8,9 +8,15 @@
 
 2. Open and start Xampp (Apache server and MySQL)
 
-3. Open symfony server (php bin/console symfony server:start on gitbash or other terminal)
+3. Open symfony server (symfony server:start on gitbash or other terminal)
 
 4. php bin/console composer install : it will install missing dependencies for symfony
+
+5. install database by commande lines : php app/console doctrine:database:create & php app/console doctrine:database:update --force
+
+5. change .env file line APP_ENV=prod by APP_ENV=dev first!
+
+6. install fixtures by this command line if necessary : composer require doctrine/doctrine-fixtures-bundle --dev
 
 5. php bin/console d:f:l (date fixtures load) : it will load datas into databases, based on our different Fixtures (users, menus, type de cuisine, chefs and commentaires)
 
