@@ -18,7 +18,7 @@
 
 6. install fixtures by this command line if necessary : composer require doctrine/doctrine-fixtures-bundle --dev
 
-5. php bin/console d:f:l (date fixtures load) : it will load datas into databases, based on our different Fixtures (users, menus, type de cuisine, chefs and commentaires)
+5. php bin/console d:f:l (doctrine:fixtures:load) : it will load datas into databases, based on our different Fixtures (users, menus, type de cuisine, chefs and commentaires)
 
 6. you can access the website on localhost:8000
 
