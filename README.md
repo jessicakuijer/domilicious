@@ -10,9 +10,9 @@
 
 3. Open symfony server (symfony server:start on gitbash or other terminal)
 
-4. php bin/console composer install : it will install missing dependencies for symfony
+4. composer install : it will install missing dependencies for symfony
 
-5. install database by commande lines : php app/console doctrine:database:create & php app/console doctrine:database:update --force
+5. install database by commande lines : php bin/console doctrine:database:create & php bin/console doctrine:database:update --force
 
 5. change .env file line APP_ENV=prod by APP_ENV=dev because you'll need it to be able to load fixtures. it won't work in production mode.
 
